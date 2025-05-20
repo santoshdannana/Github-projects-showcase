@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from './components/SearchBar';
 import UserCard from './components/UserCard';
 import RepoList from './components/RepoList';
+import octocat from './octocat.png';
 
 function App() {
   const [username, setUsername] = useState('');
@@ -124,7 +125,7 @@ function App() {
 
         {users.length === 0 && !loading && (
           <div className="empty-state">
-            <img src="/octocat.png" alt="GitHub Octocat" className="octocat-img" />
+            <img src={octocat} alt="GitHub Octocat" className="octocat-img" />
             <p>Enter a GitHub username above to get started.</p>
           </div>
         )}
